@@ -30,7 +30,9 @@ impl<N, E> Subgraph<N, E> {
         }
     }
 
-    pub fn parent_graph(&self) -> &Option<Weak<RefCell<Graph<N, E>>>> { self.parent_graph() }
+    pub fn parent_graph(&self) -> &Option<Weak<RefCell<Graph<N, E>>>> {
+        &self.parent_graph
+    }
     pub fn nodes(&self) -> &Vec<<Graph<N, E> as GraphBase>::NodeId> {
         &self.nodes
     }
@@ -77,13 +79,10 @@ where
 
 #[cfg(test)]
 mod test {
-    use super::{Subgraph, GraphPartition};
+    use super::{GraphPartition, Subgraph};
 
     #[test]
     fn subgraph_init() {
-        let mut subgraph = Subgraph::new();
-
-
+        // let mut subgraph = Subgraph::new();
     }
-
 }

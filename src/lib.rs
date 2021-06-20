@@ -9,6 +9,9 @@
 //! For a vector space of finite dimension $n$, a spanning basis $B = \lbrace\mathbf{v}_1, \dots, \mathbf{v}_n \rbrace$ has linearly independent members:
 //!    $$ \mathbf{v}_i \perp \mathbf{v}_j \  \forall i,j \in \lbrace 1,\dots,n \vert i \neq j \rbrace $$
 
+pub mod error;
+pub mod math;
+#[allow(unused_imports)] // TEMP lint ignores
+#[allow(unused_variables)]
+#[allow(dead_code)]
 pub mod partition;
-
-use petgraph;
