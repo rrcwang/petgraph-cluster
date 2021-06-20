@@ -8,4 +8,8 @@ edition = "2018"
 
 [dependencies]
 petgraph = "0.5.1"
-float_eq = "0.6"
+float_eq = "0.6"  # float equality macros
+
+# error handling
+anyhow = "1.0"
+thiserror = "1.0"
