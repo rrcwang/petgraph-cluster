@@ -1,3 +1,5 @@
+//!
+
 use core::hash::Hash;
 use petgraph::{
     graph::Edges,
@@ -58,7 +60,8 @@ pub struct GraphPartition<N, E> {
     cuts: Vec<<Graph<N, E> as GraphBase>::EdgeId>,
 }
 
-pub fn graph_cut_matrix<N, E>(graph: Graph<N, E>) -> () {}
+// TODO:
+// pub fn graph_cut_to_matrix<N, E>(graph: Graph<N, E>) -> () {}
 
 /// Computes the sparsity of a cut.
 ///
@@ -66,9 +69,9 @@ pub fn graph_cut_matrix<N, E>(graph: Graph<N, E>) -> () {}
 /// * `graph`   - a graph from 'petgraph'
 /// * `cut`     - a vector containing graph edges as [`EdgeRef`](petgraph::visit::EdgeRef)
 pub fn graph_cut_sparsity<G, Er>(graph: G, cut: Vec<Er>) -> f64
-where
-    G: IntoEdges + Visitable, // need be undirected?
-    Er: EdgeRef,              // how best to represent cut??
+    where
+        G: IntoEdges + Visitable, // need be undirected?
+        Er: EdgeRef,              // how best to represent cut??
 {
     for e in cut {
         e.source();
