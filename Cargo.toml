@@ -1,16 +1,11 @@
 [package]
 name = "petgraph-cluster"
 version = "0.1.0"
-authors = ["Richard Wang <15862033+rrcwang@users.noreply.github.com>"]
+authors = ["rrcwang - Richard Wang <15862033+rrcwang@users.noreply.github.com>"]
 edition = "2018"
 
 [dependencies]
+float_eq = "0.6" # float equality macros
 petgraph = "^0.5"
 rand = "^0.8"
-
-# float equality macros
-float_eq = "0.6"
-
-# error handling
-anyhow = "^1.0"
-thiserror = "^1.0"
+thiserror = "^1.0" # error handling

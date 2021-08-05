@@ -61,6 +61,7 @@ pub struct GraphPartition<N, E> {
 }
 
 // TODO:
+// /// Converts a cut on a graph into the partitions made by the cut.
 // pub fn graph_cut_to_matrix<N, E>(graph: Graph<N, E>) -> () {}
 
 /// Computes the sparsity of a cut.

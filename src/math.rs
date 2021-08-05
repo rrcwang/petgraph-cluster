@@ -48,14 +48,13 @@ pub fn l2_norm(a: &[f64]) -> f64 {
 
 /// Computes the correlation of two vectors as their cosine similarity.
 ///
-/// TODO: look up how to do this faster?
-/// TODO: numerical stability?
+/// TODO: numerical stability? speed trade-offs.
 pub fn correlation(a: &[f64], b: &[f64]) -> f64 {
     inner_product(a, b) / (l2_norm(a) * l2_norm(b))
 }
 
 /////////////////////////////
-// Tests
+// Unit tests
 
 #[cfg(test)]
 mod test {
